@@ -8,7 +8,8 @@ import {
   Code,
   LineChart 
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 import { 
   Carousel,
   CarouselContent,
@@ -66,6 +67,7 @@ const competencies = [
   }
 ];
 
+// Animation variants
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -81,11 +83,120 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
+// Create data particles for the animated background
+const DataParticles = () => {
+  const particles = [];
+  const numParticles = 15;
+  
+  for (let i = 0; i < numParticles; i++) {
+    const size = Math.random() * 5 + 2;
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 10 + 15;
+    
+    particles.push(
+      <div 
+        key={`particle-${i}`}
+        className="data-particle"
+        style={{
+          left: `${xPos}%`,
+          top: `${yPos}%`,
+          width: `${size}px`,
+          height: `${size}px`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`
+        }}
+      />
+    );
+  }
+  
+  // Add some data lines
+  for (let i = 0; i < 10; i++) {
+    const width = Math.random() * 80 + 20;
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 10 + 20;
+    const rotation = Math.random() * 360;
+    
+    particles.push(
+      <div 
+        key={`line-${i}`}
+        className="data-line"
+        style={{
+          left: `${xPos}%`,
+          top: `${yPos}%`,
+          width: `${width}px`,
+          transform: `rotate(${rotation}deg)`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`
+        }}
+      />
+    );
+  }
+  
+  // Add some squares
+  for (let i = 0; i < 8; i++) {
+    const size = Math.random() * 15 + 5;
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 10 + 25;
+    
+    particles.push(
+      <div 
+        key={`square-${i}`}
+        className="data-square"
+        style={{
+          left: `${xPos}%`,
+          top: `${yPos}%`,
+          width: `${size}px`,
+          height: `${size}px`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`
+        }}
+      />
+    );
+  }
+  
+  // Add some triangles
+  for (let i = 0; i < 8; i++) {
+    const xPos = Math.random() * 100;
+    const yPos = Math.random() * 100;
+    const delay = Math.random() * 10;
+    const duration = Math.random() * 10 + 18;
+    
+    particles.push(
+      <div 
+        key={`triangle-${i}`}
+        className="data-triangle"
+        style={{
+          left: `${xPos}%`,
+          top: `${yPos}%`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`
+        }}
+      />
+    );
+  }
+  
+  return particles;
+};
+
 const Index = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      {/* Orange triangle at the top */}
+      <div className="orange-triangle"></div>
+      
+      {/* Animated background */}
+      <div className="animated-background">
+        {DataParticles()}
+      </div>
+      
       {/* Hero Section */}
-      <section className="section-container">
+      <section className="section-container relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <motion.div 
             className="md:w-1/2 space-y-6"
@@ -94,7 +205,7 @@ const Index = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span className="text-white">Suhaib Ahmed</span>
+              <span className="text-gradient">Suhaib Ahmed</span>
               <div className="flex flex-wrap gap-2 text-portfolio-orange mt-2 text-xl md:text-2xl">
                 <span>Strategic Thinker.</span>
                 <span className="hidden sm:inline">|</span>
@@ -145,7 +256,7 @@ const Index = () => {
       </section>
       
       {/* Skills Carousel Section */}
-      <section className="py-16 overflow-hidden bg-gradient-to-b from-portfolio-darkGray/0 to-portfolio-darkGray/30">
+      <section className="py-16 overflow-hidden bg-gradient-to-b from-portfolio-darkGray/0 to-portfolio-darkGray/30 relative z-10">
         <div className="section-container">
           <motion.h2 
             className="text-2xl font-bold text-center mb-8 text-white"
@@ -193,7 +304,7 @@ const Index = () => {
       </section>
       
       {/* Core Competencies Section - Animated Cards */}
-      <section className="py-16 bg-portfolio-darkGray/30">
+      <section className="py-16 bg-portfolio-darkGray/30 relative z-10">
         <div className="section-container">
           <motion.h2 
             className="text-2xl font-bold text-center mb-12 text-white"

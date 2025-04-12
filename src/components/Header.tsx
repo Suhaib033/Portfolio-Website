@@ -14,7 +14,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo / Name */}
         <Link to="/" className="text-white text-2xl font-bold">
-          Your Name
+          Suhaib Ahmed
         </Link>
         
         {/* Navigation Links */}
