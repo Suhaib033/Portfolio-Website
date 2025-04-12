@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for the portfolio
+				portfolio: {
+					dark: '#0f0f0f',
+					darkBrown: '#38261d',
+					orange: '#ff793f',
+					lightOrange: '#ffdbcc',
+					brown: '#cc6133',
+					darkGray: '#333333',
+					lightGray: '#f5f5f5'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-out': {
+					'0%': {
+						opacity: '1',
+					},
+					'100%': {
+						opacity: '0',
+					}
+				},
+				'scale-down': {
+					'0%': {
+						transform: 'scale(1)',
+					},
+					'100%': {
+						transform: 'scale(0.95)',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'fade-out': 'fade-out 0.5s ease-out forwards',
+				'scale-down': 'scale-down 0.2s ease-out'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif']
+			},
+			backgroundImage: {
+				'hero-gradient': 'linear-gradient(315deg, hsla(18, 100%, 70%, 1) 0%, hsla(18, 100%, 90%, 1) 100%)',
+				'icon-gradient': 'linear-gradient(180deg, hsla(18, 100%, 62%, 1) 35%, hsla(18, 60%, 31%, 1) 100%)'
 			}
 		}
 	},
