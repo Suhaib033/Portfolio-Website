@@ -5,71 +5,70 @@ import {
   GitBranch,
   Code,
   Cloud,
-  Wrench
+  Wrench,
+  Brain,
+  Users
 } from "lucide-react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const skillCategories = [
   {
     title: "Programming Languages",
     icon: Code,
-    skills: [
-      { name: "Python", level: 90 },
-      { name: "SQL", level: 85 },
-      { name: "R", level: 75 },
-      { name: "JavaScript", level: 60 }
-    ]
+    skills: ["Python", "SQL", "C", "C++"]
+  },
+  {
+    title: "Frameworks & Libraries",
+    icon: GitBranch,
+    skills: ["Pandas", "NumPy", "Scikit-Learn", "Matplotlib"]
   },
   {
     title: "Databases",
     icon: Database,
-    skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MySQL", level: 80 },
-      { name: "MongoDB", level: 70 },
-      { name: "SQL Server", level: 75 }
-    ]
+    skills: ["MySQL", "Microsoft SQL Server", "MongoDB", "PostgreSQL"]
   },
   {
     title: "Data Visualization",
     icon: BarChart2,
-    skills: [
-      { name: "Tableau", level: 90 },
-      { name: "Power BI", level: 85 },
-      { name: "Matplotlib", level: 75 },
-      { name: "D3.js", level: 65 }
-    ]
-  },
-  {
-    title: "ETL / Data Warehousing",
-    icon: GitBranch,
-    skills: [
-      { name: "Apache Airflow", level: 80 },
-      { name: "dbt", level: 75 },
-      { name: "Data Modeling", level: 85 },
-      { name: "ETL Pipelines", level: 80 }
-    ]
+    skills: ["Tableau", "Power BI", "Matplotlib", "Excel"]
   },
   {
     title: "Cloud Platforms",
     icon: Cloud,
-    skills: [
-      { name: "AWS (S3, Redshift)", level: 75 },
-      { name: "Azure (Blob, Data Factory)", level: 70 },
-      { name: "GCP (BigQuery)", level: 65 },
-      { name: "Snowflake", level: 60 }
-    ]
+    skills: ["AWS", "Microsoft Azure", "GCP", "Snowflake"]
   },
   {
-    title: "Other Tools",
+    title: "Development Tools",
     icon: Wrench,
-    skills: [
-      { name: "Git & GitHub", level: 85 },
-      { name: "Docker", level: 70 },
-      { name: "Jupyter Notebooks", level: 90 },
-      { name: "Excel", level: 95 }
-    ]
+    skills: ["Jupyter Notebook", "PyCharm", "Visual Studio Code", "Git & GitHub"]
+  },
+  {
+    title: "Soft Skills",
+    icon: Brain,
+    skills: ["Rapport Building", "Stakeholder Management", "Project Management", "Problem Solving"]
+  },
+  {
+    title: "Leadership",
+    icon: Users,
+    skills: ["Team Leadership", "Communication", "Collaboration", "Mentoring"]
   }
 ];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 const Skills = () => {
   return (
@@ -80,11 +79,17 @@ const Skills = () => {
           Here's an overview of my technical skill set. I'm constantly learning and expanding my knowledge in data analysis and engineering.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           {skillCategories.map((category, index) => (
-            <div 
+            <motion.div 
               key={index} 
-              className="bg-portfolio-darkGray/30 rounded-xl p-6"
+              className="bg-portfolio-darkGray/30 rounded-xl p-6 backdrop-blur-sm border border-white/5 hover:border-portfolio-orange/20 transition-all duration-300 hover:shadow-[0_0_15px_rgba(255,121,63,0.15)]"
+              variants={item}
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="gradient-icon w-12 h-12">
@@ -93,25 +98,19 @@ const Skills = () => {
                 <h2 className="text-2xl font-semibold text-white">{category.title}</h2>
               </div>
               
-              <div className="space-y-5">
+              <div className="grid grid-cols-2 gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-gray-300">{skill.name}</span>
-                      <span className="text-gray-400">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-2.5">
-                      <div 
-                        className="bg-gradient-to-r from-portfolio-orange to-portfolio-brown h-2.5 rounded-full" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+                  <div 
+                    key={skillIndex}
+                    className="bg-portfolio-darkBrown/20 p-3 rounded-lg text-center hover:bg-portfolio-darkBrown/40 transition-colors duration-300"
+                  >
+                    <span className="text-gray-200">{skill}</span>
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
     </div>
   );
