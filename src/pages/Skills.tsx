@@ -5,7 +5,7 @@ import {
   GitBranch,
   Code,
   Cloud,
-  Tool
+  Wrench
 } from "lucide-react";
 
 const skillCategories = [
@@ -61,7 +61,7 @@ const skillCategories = [
   },
   {
     title: "Other Tools",
-    icon: Tool,
+    icon: Wrench,
     skills: [
       { name: "Git & GitHub", level: 85 },
       { name: "Docker", level: 70 },
