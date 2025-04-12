@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { 
   Database, 
@@ -18,7 +17,6 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
-// Tech stack items with icons
 const techStack = [
   { name: "Python", icon: "/icons/python.svg" },
   { name: "Pandas", icon: "/icons/pandas.svg" },
@@ -66,7 +64,6 @@ const competencies = [
   }
 ];
 
-// Animation variants
 const container = {
   hidden: { opacity: 0 },
   show: {
@@ -82,16 +79,13 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
-// Code symbols for animated background
 const codeSymbols = ['{', '}', '<', '>', '/', '[', ']', ';', '(', ')'];
 const binaryDigits = ['0', '1', '00', '11', '01', '10'];
 const chartSymbols = ['|||_', '|||', '/\\_', '\\_/', '...', '•••'];
 
-// Create data particles for the animated background
 const DataParticles = () => {
   const particles = [];
   
-  // Increase the number of particles
   const numParticles = 25;
   const numLines = 15;
   const numSquares = 12;
@@ -100,7 +94,6 @@ const DataParticles = () => {
   const numCodeSymbols = 18;
   const numCharts = 15;
   
-  // Regular particles
   for (let i = 0; i < numParticles; i++) {
     const size = Math.random() * 5 + 2;
     const xPos = Math.random() * 100;
@@ -124,7 +117,6 @@ const DataParticles = () => {
     );
   }
   
-  // Data lines
   for (let i = 0; i < numLines; i++) {
     const width = Math.random() * 80 + 20;
     const xPos = Math.random() * 100;
@@ -149,7 +141,6 @@ const DataParticles = () => {
     );
   }
   
-  // Squares
   for (let i = 0; i < numSquares; i++) {
     const size = Math.random() * 15 + 5;
     const xPos = Math.random() * 100;
@@ -173,7 +164,6 @@ const DataParticles = () => {
     );
   }
   
-  // Triangles
   for (let i = 0; i < numTriangles; i++) {
     const xPos = Math.random() * 100;
     const yPos = Math.random() * 100;
@@ -194,7 +184,6 @@ const DataParticles = () => {
     );
   }
   
-  // Binary Digits
   for (let i = 0; i < numBinary; i++) {
     const xPos = Math.random() * 100;
     const yPos = Math.random() * 100;
@@ -218,7 +207,6 @@ const DataParticles = () => {
     );
   }
   
-  // Code Symbols
   for (let i = 0; i < numCodeSymbols; i++) {
     const xPos = Math.random() * 100;
     const yPos = Math.random() * 100;
@@ -242,7 +230,6 @@ const DataParticles = () => {
     );
   }
   
-  // Chart Symbols
   for (let i = 0; i < numCharts; i++) {
     const xPos = Math.random() * 100;
     const yPos = Math.random() * 100;
@@ -272,15 +259,12 @@ const DataParticles = () => {
 const Index = () => {
   return (
     <div className="min-h-screen pt-24 relative">
-      {/* Orange triangle at the top */}
-      <div className="orange-triangle"></div>
+      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-16 bg-gradient-to-r from-transparent via-portfolio-orange/20 to-transparent z-0"></div>
       
-      {/* Animated background */}
       <div className="animated-background">
         {DataParticles()}
       </div>
       
-      {/* Hero Section */}
       <section className="section-container relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <motion.div 
@@ -289,14 +273,18 @@ const Index = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span className="text-gradient">Suhaib Ahmed</span>
-              <div className="flex flex-wrap gap-2 text-portfolio-orange mt-2 text-xl md:text-2xl">
-                <span>Strategic Thinker.</span>
-                <span className="hidden sm:inline">|</span>
-                <span>Calm in the Crunch.</span>
-                <span className="hidden sm:inline">|</span>
-                <span>Dedicated to the Details.</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+              Suhaib Ahmed
+              <div className="flex flex-wrap gap-2 mt-2 text-xl md:text-2xl">
+                <span 
+                  className="bg-clip-text text-transparent"
+                  style={{
+                    backgroundImage: 'linear-gradient(315deg, hsla(18, 100%, 70%, 1) 0%, hsla(18, 100%, 90%, 1) 100%)',
+                    WebkitBackgroundClip: 'text'
+                  }}
+                >
+                  Strategic Thinker. | Calm in the Crunch. | Dedicated to the Details. | Always up for a good challenge & a better conversation.
+                </span>
               </div>
             </h1>
             
@@ -331,7 +319,6 @@ const Index = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="w-64 h-64 rounded-full bg-gradient-to-br from-portfolio-orange/30 to-portfolio-darkBrown/50 border-4 border-portfolio-orange overflow-hidden">
-              {/* Placeholder for profile image */}
               <div className="w-full h-full bg-gray-800/50 backdrop-blur-sm flex items-center justify-center text-gray-300">
                 Your Photo
               </div>
@@ -340,7 +327,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Skills Carousel Section */}
       <section className="py-16 overflow-hidden bg-gradient-to-b from-portfolio-darkGray/0 to-portfolio-darkGray/30 relative z-10">
         <div className="section-container">
           <motion.h2 
@@ -388,7 +374,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Core Competencies Section - Animated Cards */}
       <section className="py-16 bg-portfolio-darkGray/30 relative z-10">
         <div className="section-container">
           <motion.h2 
