@@ -289,10 +289,6 @@ const Index = () => {
             </h1>
             
             <p className="text-lg text-gray-300">
-              Always up for a good challenge & a better conversation.
-            </p>
-            
-            <p className="text-lg text-gray-300">
               Data detective by trade, caffeine-powered problem solver by choice. I turn messy spreadsheets into sleek dashboards, unanswered questions into actionable insights, and coffee into Python scripts.
             </p>
             
