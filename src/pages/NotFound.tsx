@@ -1,6 +1,8 @@
 
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
+import AnimatedBackground from "../components/AnimatedBackground";
+import OrangeHue from "../components/OrangeHue";
 
 const NotFound = () => {
   const location = useLocation();
@@ -13,8 +15,11 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-portfolio-dark">
-      <div className="text-center px-4">
+    <div className="min-h-screen flex items-center justify-center bg-portfolio-dark relative">
+      <OrangeHue />
+      <AnimatedBackground />
+      
+      <div className="text-center px-4 relative z-10">
         <h1 className="text-8xl font-bold text-portfolio-orange mb-4">404</h1>
         <p className="text-2xl text-white mb-8">Oops! Page not found</p>
         <p className="text-gray-400 mb-8 max-w-lg mx-auto">

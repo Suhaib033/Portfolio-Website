@@ -1,6 +1,7 @@
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import OrangeHue from "../components/OrangeHue";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,9 @@ const Contact = () => {
   };
   
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      <OrangeHue />
+      
       <section className="section-container">
         <h1 className="text-4xl font-bold mb-8 text-white">Get In Touch</h1>
         
@@ -65,10 +68,10 @@ const Contact = () => {
                   <div>
                     <h3 className="text-gray-300 font-medium">Email</h3>
                     <a 
-                      href="mailto:your.email@example.com" 
+                      href="mailto:suhaibahmed033@gmail.com" 
                       className="text-portfolio-orange hover:underline"
                     >
-                      your.email@example.com
+                      suhaibahmed033@gmail.com
                     </a>
                   </div>
                 </div>
@@ -77,7 +80,7 @@ const Contact = () => {
                   <MapPin className="text-portfolio-orange mt-1" size={20} />
                   <div>
                     <h3 className="text-gray-300 font-medium">Location</h3>
-                    <p className="text-white">City, State</p>
+                    <p className="text-white">Hyderabad, Telangana, India</p>
                   </div>
                 </div>
                 
@@ -86,12 +89,12 @@ const Contact = () => {
                   <div>
                     <h3 className="text-gray-300 font-medium">LinkedIn</h3>
                     <a 
-                      href="https://linkedin.com/in/" 
+                      href="https://www.linkedin.com/in/suhaib-ahmed033" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-portfolio-orange hover:underline"
                     >
-                      linkedin.com/in/yourprofile
+                      linkedin.com/in/suhaib-ahmed033
                     </a>
                   </div>
                 </div>
@@ -101,12 +104,12 @@ const Contact = () => {
                   <div>
                     <h3 className="text-gray-300 font-medium">GitHub</h3>
                     <a 
-                      href="https://github.com/" 
+                      href="https://github.com/Suhaib033" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-portfolio-orange hover:underline"
                     >
-                      github.com/yourusername
+                      github.com/Suhaib033
                     </a>
                   </div>
                 </div>

@@ -1,9 +1,14 @@
 
 import { Link } from "react-router-dom";
+import AnimatedBackground from "../components/AnimatedBackground";
+import OrangeHue from "../components/OrangeHue";
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      <OrangeHue />
+      <AnimatedBackground />
+      
       <section className="section-container">
         <h1 className="text-4xl font-bold mb-8 text-white">About Me</h1>
         

@@ -1,6 +1,6 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
+import OrangeHue from "../components/OrangeHue";
 
 // Sample project data for the template
 const sampleProject = {
@@ -61,7 +61,9 @@ const ProjectDetail = () => {
   const project = sampleProject;
   
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      <OrangeHue />
+      
       <div className="section-container">
         <div className="mb-8">
           <Link 

@@ -1,4 +1,6 @@
-
+import React from "react";
+import AnimatedBackground from "../components/AnimatedBackground";
+import OrangeHue from "../components/OrangeHue";
 import {
   Database,
   BarChart2,
@@ -72,7 +74,10 @@ const item = {
 
 const Skills = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      <OrangeHue />
+      <AnimatedBackground />
+      
       <section className="section-container">
         <h1 className="text-4xl font-bold mb-8 text-white">Technical Skills</h1>
         <p className="text-gray-300 mb-12 max-w-3xl">

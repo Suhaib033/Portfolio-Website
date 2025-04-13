@@ -1,5 +1,6 @@
-
-import { Link } from "react-router-dom";
+import React from "react";
+import AnimatedBackground from "../components/AnimatedBackground";
+import OrangeHue from "../components/OrangeHue";
 
 // Sample project data
 const projects = [
@@ -49,7 +50,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 relative">
+      <OrangeHue />
+      <AnimatedBackground />
+      
       <section className="section-container">
         <h1 className="text-4xl font-bold mb-8 text-white">My Projects</h1>
         <p className="text-gray-300 mb-12 max-w-3xl">
