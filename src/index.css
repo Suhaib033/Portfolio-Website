@@ -147,7 +147,7 @@
   
   .data-particle {
     position: absolute;
-    opacity: 0.15;
+    opacity: 0.25;
     border-radius: 50%;
     background-color: rgba(255, 121, 63, 0.6);
     animation: float 15s infinite linear;
@@ -157,7 +157,7 @@
     position: absolute;
     width: 50px;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.2);
     animation: float 20s infinite linear;
   }
   
@@ -165,7 +165,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    border: 1px solid rgba(255, 121, 63, 0.3);
+    border: 1px solid rgba(255, 121, 63, 0.4);
     background-color: transparent;
     animation: float 25s infinite linear, rotate 30s infinite linear;
   }
@@ -176,14 +176,14 @@
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 15px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 15px solid rgba(255, 255, 255, 0.2);
     animation: float 18s infinite linear, rotate 40s infinite linear;
   }
 
   .data-binary {
     position: absolute;
     font-size: 10px;
-    opacity: 0.15;
+    opacity: 0.25;
     color: rgba(255, 121, 63, 0.8);
     animation: float 22s infinite linear, fade-pulse 8s infinite ease-in-out;
   }
@@ -191,7 +191,7 @@
   .data-code-symbol {
     position: absolute;
     font-size: 12px;
-    opacity: 0.15;
+    opacity: 0.25;
     color: rgba(255, 255, 255, 0.8);
     animation: float 20s infinite linear, rotate 35s infinite linear, fade-pulse 6s infinite ease-in-out;
   }
@@ -199,7 +199,7 @@
   .data-chart {
     position: absolute;
     font-size: 10px;
-    opacity: 0.15;
+    opacity: 0.25;
     color: rgba(255, 121, 63, 0.8);
     animation: float 25s infinite linear, fade-pulse 7s infinite ease-in-out;
   }
@@ -233,13 +233,13 @@
 
   @keyframes fade-pulse {
     0% {
-      opacity: 0.15;
-    }
-    50% {
       opacity: 0.25;
     }
+    50% {
+      opacity: 0.4;
+    }
     100% {
-      opacity: 0.15;
+      opacity: 0.25;
     }
   }
   

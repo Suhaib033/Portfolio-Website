@@ -12,23 +12,29 @@ const About = () => {
             <div className="prose prose-invert max-w-none">
               <h2 className="text-2xl font-semibold text-portfolio-orange">My Journey into Data</h2>
               <p className="text-gray-300">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vel nisl faucibus ultricies. 
-                Praesent et risus luctus, efficitur nibh in, facilisis lorem. Nulla facilisi. Donec tincidunt, 
-                nunc eget aliquam aliquam, nunc nisl ultricies nisl, vitae ultricies nunc nisl eget nisl.
+                My path into data started with a strong curiosity about how technology shapes our world. 
+                Exploring programming and cloud platforms naturally led me to the fascinating field of data. 
+                I became captivated by both the analytical side – extracting meaning – and the engineering side – 
+                building robust systems to handle information flow. Through online courses, personal projects like 
+                [mention one briefly if applicable], and dedicated self-study, I've built a solid foundation and 
+                am now excited to transition this passion into a professional data role.
               </p>
               
               <h2 className="text-2xl font-semibold text-portfolio-orange mt-8">My Approach to Data Problems</h2>
               <p className="text-gray-300">
-                Suspendisse potenti. Cras efficitur, nunc eget aliquam aliquam, nunc nisl ultricies nisl, 
-                vitae ultricies nunc nisl eget nisl. Sed vitae justo vel nisl faucibus ultricies. Praesent et risus luctus, 
-                efficitur nibh in, facilisis lorem. Nulla facilisi.
+                I approach data problems methodically. I believe in first thoroughly understanding the context and 
+                the questions being asked. My process emphasizes careful data cleaning and validation, ensuring a 
+                reliable foundation before analysis or pipeline development. I'm detail-oriented and committed to 
+                delivering accurate, well-documented work, whether it's uncovering insights or building efficient 
+                data structures.
               </p>
               
               <h2 className="text-2xl font-semibold text-portfolio-orange mt-8">What Motivates Me</h2>
               <p className="text-gray-300">
-                Nulla facilisi. Donec tincidunt, nunc eget aliquam aliquam, nunc nisl ultricies nisl, 
-                vitae ultricies nunc nisl eget nisl. Sed vitae justo vel nisl faucibus ultricies. 
-                Praesent et risus luctus, efficitur nibh in, facilisis lorem.
+                I'm motivated by the constant learning and intellectual challenge inherent in the data field. 
+                I enjoy the process of exploring complex datasets, discovering hidden patterns, and mastering 
+                new tools and technologies. The pursuit of understanding and the elegance of a well-crafted 
+                solution are what keep me engaged and excited about this work.
               </p>
               
               <div className="flex flex-wrap gap-4 mt-8">

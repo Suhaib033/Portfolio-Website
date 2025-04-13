@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { 
   Database, 
@@ -259,7 +260,7 @@ const DataParticles = () => {
 const Index = () => {
   return (
     <div className="min-h-screen pt-24 relative">
-      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-16 bg-gradient-to-r from-transparent via-portfolio-orange/20 to-transparent z-0"></div>
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-16 bg-gradient-to-r from-transparent via-portfolio-orange/20 to-transparent z-0"></div>
       
       <div className="animated-background">
         {DataParticles()}
@@ -283,7 +284,7 @@ const Index = () => {
                     WebkitBackgroundClip: 'text'
                   }}
                 >
-                  Strategic Thinker. | Calm in the Crunch. | Dedicated to the Details. | Always up for a good challenge & a better conversation.
+                  Strategic Thinker. | Calm in the Crunch. | Dedicated to the Details.
                 </span>
               </div>
             </h1>
@@ -344,13 +345,13 @@ const Index = () => {
             <CarouselContent>
               {techStack.map((tech, index) => (
                 <CarouselItem key={index} className="md:basis-1/4 lg:basis-1/5">
-                  <Card className="bg-portfolio-darkGray/30 border-white/5 hover:border-portfolio-orange/20 transition-all duration-300">
+                  <Card className="bg-portfolio-darkGray/30 border-white/5 hover:border-portfolio-orange/20 transition-all duration-300 h-full">
                     <CardContent className="flex flex-col items-center justify-center p-6">
-                      <div className="w-12 h-12 mb-4 flex items-center justify-center bg-portfolio-darkGray/50 rounded-full overflow-hidden">
+                      <div className="w-14 h-14 mb-4 flex items-center justify-center bg-portfolio-darkGray/50 rounded-full overflow-hidden">
                         <img 
                           src={tech.icon} 
                           alt={tech.name} 
-                          className="w-6 h-6 object-contain"
+                          className="w-8 h-8 object-contain"
                           onError={(e) => {
                             e.currentTarget.src = "/placeholder.svg";
                           }}
