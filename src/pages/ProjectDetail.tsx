@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -25,7 +26,12 @@ const projects = {
     ],
     challenges: "Key challenges included resolving data quality issues across source systems, designing an efficient schema that balanced performance with flexibility, and creating analytics that delivered actionable insights from the combined dataset.",
     results: "The implemented data warehouse successfully consolidated disparate data sources, enabling comprehensive analysis of customer behavior, product performance, and sales trends. The project delivered a foundation for data-driven decision making through unified, reliable data access.",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+    images: [
+      "/lovable-uploads/a41d2378-c208-4500-acf2-dc5f7e786dda.png", 
+      "/lovable-uploads/5d811d5a-fc99-4f2e-88f4-c25ccf1d7ddc.png", 
+      "/lovable-uploads/7f72696d-34de-4f36-ba36-d2ebe02ef3b1.png",
+      "/lovable-uploads/06edcf2a-c6fd-4113-bac0-11b17612793f.png"
+    ],
     files: [
       {
         name: "View Code on GitHub",
@@ -170,7 +176,7 @@ const ProjectDetail = () => {
           
           {/* Project images carousel/gallery */}
           <div className="mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.images.map((image, index) => (
                 <div 
                   key={index} 

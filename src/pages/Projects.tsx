@@ -10,7 +10,7 @@ const projects = [
     title: "SQL Data Warehouse",
     description: "Designed a comprehensive data warehousing and analytics solution that consolidates sales data, enabling analytical reporting and informed decision-making.",
     technologies: ["SQL", "SQL Server", "Data Modeling", "ETL", "Analytics"],
-    image: "/placeholder.svg"
+    image: "/lovable-uploads/f70cbb10-7fd9-4ce3-b8db-0bd09654a412.png"
   },
   {
     id: 2,
