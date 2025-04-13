@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "../components/AnimatedBackground";
@@ -8,9 +7,9 @@ import OrangeHue from "../components/OrangeHue";
 const projects = [
   {
     id: 1,
-    title: "Sales Dashboard Analysis",
-    description: "Created an interactive dashboard to analyze sales trends and customer behavior for an e-commerce platform.",
-    technologies: ["Python", "Pandas", "Tableau", "SQL"],
+    title: "SQL Data Warehouse",
+    description: "Designed a comprehensive data warehousing and analytics solution that consolidates sales data, enabling analytical reporting and informed decision-making.",
+    technologies: ["SQL", "SQL Server", "Data Modeling", "ETL", "Analytics"],
     image: "/placeholder.svg"
   },
   {
