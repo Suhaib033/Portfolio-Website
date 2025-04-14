@@ -1,8 +1,9 @@
+
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
 
-// Project data
+// Project data - moved to the top of the file to fix reference errors
 const projects = {
   "1": {
     id: 1,
@@ -156,79 +157,83 @@ const projects = {
         url: "https://github.com/Suhaib033/HR-Dashboard/tree/main/docs",
         icon: FileText
       }
-    ],
-    overview: `
-      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">User Story</h3>
-      <p class="text-gray-300 mb-6">${projects["2"].userStory}</p>
-
-      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Overview</h3>
-      <p class="text-gray-300 mb-4">The dashboard is divided into three main sections:</p>
-      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
-        <li>Overview metrics and visualizations</li>
-        <li>Demographics analysis</li>
-        <li>Income analysis</li>
-      </ul>
-
-      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Features & Functionality</h3>
-      ${Object.entries(projects["2"].sections).map(([key, section]) => `
-        <div class="mb-6">
-          <h4 class="text-lg font-medium mb-2 text-white">${section.title}</h4>
-          <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
-            ${section.items.map(item => `<li>${item}</li>`).join('')}
-          </ul>
-        </div>
-      `).join('')}
-    `
-  },
-  "default": {
-    id: "default",
-    title: "Sales Dashboard Analysis",
-    description: "Created an interactive dashboard to analyze sales trends and customer behavior for an e-commerce platform.",
-    problem: "The client needed a way to visualize sales data across multiple dimensions to identify trends and opportunities for growth.",
-    approach: [
-      "Conducted stakeholder interviews to understand key business questions",
-      "Cleaned and transformed raw sales data from multiple sources",
-      "Designed dashboard mockups for stakeholder approval",
-      "Built interactive visualizations with drill-down capabilities",
-      "Implemented automated data refresh processes"
-    ],
-    technologies: [
-      "Python (Pandas, NumPy) for data processing",
-      "Tableau for visualization and dashboard creation",
-      "SQL for data extraction",
-      "Git for version control"
-    ],
-    challenges: "One of the main challenges was integrating data from multiple sources with inconsistent formatting. I resolved this by creating a data transformation pipeline that standardized formats and merged data sources.",
-    results: "The dashboard revealed that 60% of sales came from returning customers, and that product bundles outperformed individual products by 35%. This led to a strategic shift in marketing focus that increased overall revenue by 22% in the following quarter.",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    files: [
-      {
-        name: "View Code on GitHub",
-        url: "https://github.com/",
-        icon: Github
-      },
-      {
-        name: "Download Full Analysis Report (PDF)",
-        url: "/path-to-sample-file.pdf",
-        icon: FileText
-      },
-      {
-        name: "View Presentation Slides",
-        url: "/path-to-sample-slides.pdf",
-        icon: FileText
-      },
-      {
-        name: "Explore Data Dictionary (CSV)",
-        url: "/path-to-sample-data.csv",
-        icon: Database
-      },
-      {
-        name: "See Dashboard Screenshots",
-        url: "/gallery",
-        icon: Image
-      }
     ]
   }
+};
+
+// Add the overview HTML for project 2
+projects["2"].overview = `
+  <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">User Story</h3>
+  <p class="text-gray-300 mb-6">${projects["2"].userStory}</p>
+
+  <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Overview</h3>
+  <p class="text-gray-300 mb-4">The dashboard is divided into three main sections:</p>
+  <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+    <li>Overview metrics and visualizations</li>
+    <li>Demographics analysis</li>
+    <li>Income analysis</li>
+  </ul>
+
+  <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Features & Functionality</h3>
+  ${Object.entries(projects["2"].sections).map(([key, section]) => `
+    <div class="mb-6">
+      <h4 class="text-lg font-medium mb-2 text-white">${section.title}</h4>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
+        ${section.items.map(item => `<li>${item}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('')}
+`;
+
+// Default project data
+projects["default"] = {
+  id: "default",
+  title: "Sales Dashboard Analysis",
+  description: "Created an interactive dashboard to analyze sales trends and customer behavior for an e-commerce platform.",
+  problem: "The client needed a way to visualize sales data across multiple dimensions to identify trends and opportunities for growth.",
+  approach: [
+    "Conducted stakeholder interviews to understand key business questions",
+    "Cleaned and transformed raw sales data from multiple sources",
+    "Designed dashboard mockups for stakeholder approval",
+    "Built interactive visualizations with drill-down capabilities",
+    "Implemented automated data refresh processes"
+  ],
+  technologies: [
+    "Python (Pandas, NumPy) for data processing",
+    "Tableau for visualization and dashboard creation",
+    "SQL for data extraction",
+    "Git for version control"
+  ],
+  challenges: "One of the main challenges was integrating data from multiple sources with inconsistent formatting. I resolved this by creating a data transformation pipeline that standardized formats and merged data sources.",
+  results: "The dashboard revealed that 60% of sales came from returning customers, and that product bundles outperformed individual products by 35%. This led to a strategic shift in marketing focus that increased overall revenue by 22% in the following quarter.",
+  images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
+  files: [
+    {
+      name: "View Code on GitHub",
+      url: "https://github.com/",
+      icon: Github
+    },
+    {
+      name: "Download Full Analysis Report (PDF)",
+      url: "/path-to-sample-file.pdf",
+      icon: FileText
+    },
+    {
+      name: "View Presentation Slides",
+      url: "/path-to-sample-slides.pdf",
+      icon: FileText
+    },
+    {
+      name: "Explore Data Dictionary (CSV)",
+      url: "/path-to-sample-data.csv",
+      icon: Database
+    },
+    {
+      name: "See Dashboard Screenshots",
+      url: "/gallery",
+      icon: Image
+    }
+  ]
 };
 
 const ProjectDetail = () => {
