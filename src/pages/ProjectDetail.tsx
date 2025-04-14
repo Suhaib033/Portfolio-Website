@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -97,7 +96,90 @@ const projects = {
       </ul>
     `
   },
-  // Keep the existing sample project as a fallback for other IDs
+  "2": {
+    id: 2,
+    title: "Tableau HR Dashboard",
+    description: "A comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
+    userStory: "As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
+    sections: {
+      overview: {
+        title: "Overview Features",
+        items: [
+          "Total number of hired employees, active employees, and terminated employees",
+          "Visualization of hired and terminated employees over years",
+          "Breakdown of total employees by department and job titles",
+          "Comparison of employees between HQ and branches (New York is HQ)",
+          "Distribution of employees by city and state"
+        ]
+      },
+      demographics: {
+        title: "Demographics Analysis",
+        items: [
+          "Gender ratio visualization",
+          "Distribution across age groups and education levels",
+          "Total employees by age group",
+          "Total employees by education level",
+          "Correlation between educational backgrounds and performance ratings"
+        ]
+      },
+      income: {
+        title: "Income Analysis",
+        items: [
+          "Salary comparison across education levels by gender",
+          "Age-salary correlation by department"
+        ]
+      },
+      employeeRecords: {
+        title: "Employee Records View",
+        items: [
+          "Comprehensive employee list with detailed information",
+          "Filterable columns for customized views"
+        ]
+      }
+    },
+    technologies: ["Tableau", "Data Visualization", "HR Analytics", "Dashboard Design"],
+    challenges: "The main challenge was designing an intuitive interface that could present complex HR data in an easily digestible format while maintaining the ability to drill down into specific details when needed.",
+    results: "The dashboard successfully provides HR managers with both high-level insights and detailed employee information, enabling data-driven decision-making for workforce management.",
+    images: [
+      "/lovable-uploads/d0492ec9-d550-4120-813d-addf4afd535d.png",
+      "/lovable-uploads/83a7d5d6-67a9-4b45-bc49-e07573f2387f.png",
+      "/lovable-uploads/9cd31741-345a-4c31-bddb-b482161a03da.png"
+    ],
+    files: [
+      {
+        name: "View Code on GitHub",
+        url: "https://github.com/Suhaib033/HR-Dashboard",
+        icon: Github
+      },
+      {
+        name: "Project Documentation",
+        url: "https://github.com/Suhaib033/HR-Dashboard/tree/main/docs",
+        icon: FileText
+      }
+    ],
+    overview: `
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">User Story</h3>
+      <p class="text-gray-300 mb-6">${projects["2"].userStory}</p>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Overview</h3>
+      <p class="text-gray-300 mb-4">The dashboard is divided into three main sections:</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Overview metrics and visualizations</li>
+        <li>Demographics analysis</li>
+        <li>Income analysis</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Features & Functionality</h3>
+      ${Object.entries(projects["2"].sections).map(([key, section]) => `
+        <div class="mb-6">
+          <h4 class="text-lg font-medium mb-2 text-white">${section.title}</h4>
+          <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4">
+            ${section.items.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('')}
+    `
+  },
   "default": {
     id: "default",
     title: "Sales Dashboard Analysis",

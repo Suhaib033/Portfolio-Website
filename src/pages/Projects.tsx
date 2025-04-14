@@ -14,10 +14,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "ETL Pipeline for Customer Data",
-    description: "Designed and implemented a robust ETL pipeline to process and transform customer data from multiple sources.",
-    technologies: ["Python", "Apache Airflow", "PostgreSQL", "dbt"],
-    image: "/placeholder.svg"
+    title: "Tableau HR Dashboard",
+    description: "A comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
+    technologies: ["Tableau", "Data Visualization", "HR Analytics", "Dashboard Design"],
+    image: "/lovable-uploads/d0492ec9-d550-4120-813d-addf4afd535d.png"
   },
   {
     id: 3,
