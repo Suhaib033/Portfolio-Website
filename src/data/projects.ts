@@ -1,5 +1,4 @@
-
-import { Github, FileText, Database, Image } from "lucide-react";
+import { Github, FileText, Database } from "lucide-react";
 
 export interface Project {
   id: number | string;
@@ -180,6 +179,79 @@ export const projects: { [key: string]: Project } = {
       }
     ]
   },
+  "3": {
+    id: 3,
+    title: "Netflix Analytics Dashboard",
+    description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
+    userStory: "As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis.",
+    sections: {
+      overview: {
+        title: "Overview Features",
+        items: [
+          "Total number of movies and TV shows metrics",
+          "Content additions over time visualization",
+          "Genre and type breakdown analysis",
+          "Regional content distribution comparison",
+          "Country and language distribution metrics"
+        ]
+      },
+      demographics: {
+        title: "Content Demographics",
+        items: [
+          "Movie to TV show ratio analysis",
+          "Genre and ratings distribution",
+          "Content volume by genre",
+          "Rating category analysis",
+          "Viewer engagement correlation with ratings"
+        ]
+      },
+      performance: {
+        title: "Performance Analysis",
+        items: [
+          "Genre-specific viewer engagement patterns",
+          "Rating correlation with viewer engagement",
+          "Content performance by genre"
+        ]
+      },
+      records: {
+        title: "Content Records Features",
+        items: [
+          "Comprehensive content listing",
+          "Multi-column filtering capabilities",
+          "Detailed metadata display",
+          "Interactive data exploration"
+        ]
+      },
+      additional: {
+        title: "Additional Features",
+        items: [
+          "Interactive data filters",
+          "Dynamic visualization components",
+          "Drill-down analysis capabilities",
+          "Data and visual export options"
+        ]
+      }
+    },
+    technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
+    challenges: "The main challenge was designing an intuitive interface that could present complex Netflix content data in an easily digestible format while maintaining the ability to drill down into specific metrics when needed.",
+    results: "The dashboard successfully provides analysts with both high-level insights and detailed content information, enabling data-driven decision-making for content strategy.",
+    images: [
+      "/lovable-uploads/83a7d5d6-67a9-4b45-bc49-e07573f2387f.png",
+      "/lovable-uploads/9cd31741-345a-4c31-bddb-b482161a03da.png"
+    ],
+    files: [
+      {
+        name: "View Code on GitHub",
+        url: "https://github.com/Suhaib033/Netflix-Analytics",
+        icon: Github
+      },
+      {
+        name: "Project Documentation",
+        url: "https://github.com/Suhaib033/Netflix-Analytics/tree/main/docs",
+        icon: FileText
+      }
+    ]
+  },
   "default": {
     id: "default",
     title: "Sales Dashboard Analysis",
@@ -230,4 +302,3 @@ export const projects: { [key: string]: Project } = {
     ]
   }
 };
-

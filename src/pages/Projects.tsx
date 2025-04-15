@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import AnimatedBackground from "../components/AnimatedBackground";
 import OrangeHue from "../components/OrangeHue";
 
-// Sample project data
+// Updated project data with only three projects
 const projects = [
   {
     id: 1,
@@ -21,31 +21,10 @@ const projects = [
   },
   {
     id: 3,
-    title: "Predictive Analysis of Market Trends",
-    description: "Used machine learning models to predict market trends based on historical data and external economic factors.",
-    technologies: ["Python", "Scikit-learn", "Matplotlib", "Pandas"],
-    image: "/placeholder.svg"
-  },
-  {
-    id: 4,
-    title: "Customer Segmentation Analysis",
-    description: "Segmented customers based on purchasing behaviors to improve targeted marketing campaigns.",
-    technologies: ["R", "ggplot2", "K-means Clustering", "Power BI"],
-    image: "/placeholder.svg"
-  },
-  {
-    id: 5,
-    title: "Data Quality Monitoring System",
-    description: "Built an automated system to monitor and report on data quality issues across enterprise databases.",
-    technologies: ["Python", "SQL", "Great Expectations", "Docker"],
-    image: "/placeholder.svg"
-  },
-  {
-    id: 6,
-    title: "Financial Data Analysis Dashboard",
-    description: "Developed a comprehensive dashboard for financial analysis with drill-down capabilities and anomaly detection.",
-    technologies: ["Power BI", "DAX", "SQL", "Excel"],
-    image: "/placeholder.svg"
+    title: "Netflix Analytics Dashboard",
+    description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
+    technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
+    image: "/lovable-uploads/83a7d5d6-67a9-4b45-bc49-e07573f2387f.png"
   }
 ];
 
