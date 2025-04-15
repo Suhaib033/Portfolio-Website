@@ -1,3 +1,4 @@
+
 import { Github, FileText } from "lucide-react";
 
 export interface Project {
@@ -139,40 +140,47 @@ export const projects: { [key: string]: Project } = {
         icon: FileText
       }
     ],
-    userStory: "As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
     sections: {
+      userStory: {
+        title: "User Story - HR Dashboard",
+        items: ["As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis"]
+      },
+      summaryView: {
+        title: "Summary View",
+        items: ["The summary view should be divided into three main sections: Overview, Demographics, and Income Analysis"]
+      },
       overview: {
         title: "Overview",
         items: [
-          "Display the total number of hired employees, active employees, and terminated employees",
-          "Visualize the total number of hired and terminated employees over the years",
-          "Present a breakdown of total employees by department and job titles",
+          "Display the total number of hired employees, active employees, and terminated employees.",
+          "Visualize the total number of hired and terminated employees over the years.",
+          "Present a breakdown of total employees by department and job titles.",
           "Compare total employees between headquarters (HQ) and branches (New York is the HQ)",
-          "Show the distribution of employees by city and state"
+          "Show the distribution of employees by city and state."
         ]
       },
       demographics: {
         title: "Demographics",
         items: [
-          "Present the gender ratio in the company",
-          "Visualize the distribution of employees across age groups and education levels",
-          "Show the total number of employees within each age group",
-          "Show the total number of employees within each education level",
-          "Present the correlation between employees's educational backgrounds and their performance ratings"
+          "Present the gender ratio in the company.",
+          "Visualize the distribution of employees across age groups and education levels.",
+          "Show the total number of employees within each age group.",
+          "Show the total number of employees within each education level.",
+          "Present the correlation between employees's educational backgrounds and their performance ratings."
         ]
       },
       income: {
-        title: "Income Analysis",
+        title: "Income",
         items: [
-          "Compare salaries across different education levels for both genders to identify any discrepancies or patterns",
-          "Present how the age correlate with the salary for employees in each department"
+          "Compare salaries across different education levels for both genders to identify any discrepancies or patterns.",
+          "Present how the age correlate with the salary for employees in each department."
         ]
       },
       employeeRecords: {
         title: "Employee Records View",
         items: [
-          "Provide a comprehensive list of all employees with necessary information such as name, department, position, gender, age, education, and salary",
-          "Users should be able to filter the list based on any of the available columns"
+          "Provide a comprehensive list of all employees with necessary information such as name, department, position, gender, age, education, and salary.",
+          "Users should be able to filter the list based on any of the available columns."
         ]
       }
     }
@@ -183,8 +191,8 @@ export const projects: { [key: string]: Project } = {
     description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
     technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
     images: [
-      "/lovable-uploads/0bb229d7-4dd8-4ddb-bec5-99322fe27e38.png",
-      "/lovable-uploads/bb449194-1f85-45c6-ac44-370fb145bc3f.png"
+      "/lovable-uploads/6c442f92-fc76-4004-bfdb-9dba484ce65d.png",
+      "/lovable-uploads/c425daca-03be-4c30-866c-16dd54fded7c.png"
     ],
     files: [
       {
@@ -198,49 +206,64 @@ export const projects: { [key: string]: Project } = {
         icon: FileText
       }
     ],
-    userStory: "As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis.",
     sections: {
+      userStory: {
+        title: "User Story",
+        items: ["As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis."]
+      },
+      summaryView: {
+        title: "Summary View",
+        items: ["The summary view should be divided into three main sections: Overview, Content Demographics, and Performance Analysis."]
+      },
       overview: {
         title: "Overview",
         items: [
-          "Display the total number of movies and TV shows",
-          "Visualize the total number of movies and TV shows added over the years",
-          "Present a breakdown of total content by genre and type (movie or TV show)",
-          "Compare total content between different regions (e.g., North America, Europe, Asia)",
-          "Show the distribution of content by country and language"
+          "Display the total number of movies and TV shows.",
+          "Visualize the total number of movies and TV shows added over the years.",
+          "Present a breakdown of total content by genre and type (movie or TV show).",
+          "Compare total content between different regions (e.g., North America, Europe, Asia).",
+          "Show the distribution of content by country and language."
         ]
       },
-      demographics: {
+      contentDemographics: {
         title: "Content Demographics",
         items: [
-          "Present the ratio of movies to TV shows",
-          "Visualize the distribution of content across different genres and ratings",
-          "Show the total number of content within each genre",
-          "Show the total number of content within each rating category",
-          "Present the correlation between content ratings and their viewer engagement metrics"
+          "Present the ratio of movies to TV shows.",
+          "Visualize the distribution of content across different genres and ratings.",
+          "Show the total number of content within each genre.",
+          "Show the total number of content within each rating category.",
+          "Present the correlation between content ratings and their viewer engagement metrics."
         ]
       },
-      performance: {
+      performanceAnalysis: {
         title: "Performance Analysis",
         items: [
-          "Compare viewer engagement across different genres for both movies and TV shows to identify any discrepancies or patterns",
-          "Present how the content ratings correlate with viewer engagement for content in each genre"
+          "Compare viewer engagement across different genres for both movies and TV shows to identify any discrepancies or patterns.",
+          "Present how the content ratings correlate with viewer engagement for content in each genre."
         ]
       },
       contentRecords: {
         title: "Content Records View",
         items: [
-          "Provide a comprehensive list of all content with necessary information such as title, type (movie or TV show), genre, rating, release year, duration, and viewer engagement metrics",
-          "Users should be able to filter the list based on any of the available columns"
+          "Provide a comprehensive list of all content with necessary information such as title, type (movie or TV show), genre, rating, release year, duration, and viewer engagement metrics.",
+          "Users should be able to filter the list based on any of the available columns."
         ]
       },
-      additional: {
+      additionalFeatures: {
         title: "Additional Features",
         items: [
-          "Interactive Filters: Allow users to filter data by year, genre, type, region, and rating",
-          "Dynamic Visuals: Use dynamic and interactive visuals to present data, including bar charts, line charts, pie charts, and maps",
-          "Drill-Down Capabilities: Enable users to drill down into specific data points for more detailed analysis",
-          "Export Options: Allow users to export data and visuals for reporting purposes"
+          "Interactive Filters: Allow users to filter data by year, genre, type, region, and rating.",
+          "Dynamic Visuals: Use dynamic and interactive visuals to present data, including bar charts, line charts, pie charts, and maps.",
+          "Drill-Down Capabilities: Enable users to drill down into specific data points for more detailed analysis.",
+          "Export Options: Allow users to export data and visuals for reporting purposes."
+        ]
+      },
+      considerations: {
+        title: "Considerations",
+        items: [
+          "Data Source: Ensure the data is clean and well-organized, including all necessary fields such as title, type, genre, rating, release year, duration, and viewer engagement metrics.",
+          "Data Modeling: Create a robust data model that supports efficient querying and analysis.",
+          "User Experience: Design the dashboard with a user-friendly interface that is intuitive and easy to navigate."
         ]
       }
     }
