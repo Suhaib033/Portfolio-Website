@@ -9,7 +9,6 @@ export const netflixAnalytics: Project = {
   technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
   images: [
     "/lovable-uploads/6c442f92-fc76-4004-bfdb-9dba484ce65d.png",
-    "/lovable-uploads/c425daca-03be-4c30-866c-16dd54fded7c.png"
   ],
   files: [
     {

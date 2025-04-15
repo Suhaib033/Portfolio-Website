@@ -8,8 +8,7 @@ export const tableauHrDashboard: Project = {
   description: "A comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
   technologies: ["Tableau", "Data Visualization", "HR Analytics", "Dashboard Design"],
   images: [
-    "/lovable-uploads/481792a5-eac3-4231-8d11-f3e87ca49529.png",
-    "/lovable-uploads/bacdff3b-7f39-43d9-9ddc-8278e37536c8.png"
+    "/lovable-uploads/481792a5-eac3-4231-8d11-f3e87ca49529.png"
   ],
   files: [
     {

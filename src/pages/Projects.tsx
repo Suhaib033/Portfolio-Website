@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import AnimatedBackground from "../components/AnimatedBackground";
@@ -24,7 +25,7 @@ const projects = [
     title: "Netflix Analytics Dashboard",
     description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
     technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
-    image: "/lovable-uploads/83a7d5d6-67a9-4b45-bc49-e07573f2387f.png"
+    image: "/lovable-uploads/6c442f92-fc76-4004-bfdb-9dba484ce65d.png"
   }
 ];
 

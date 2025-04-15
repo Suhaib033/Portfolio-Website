@@ -1,5 +1,4 @@
-
-import { Project } from "../data/projects";
+import { Project } from "../data/types";
 
 interface ProjectContentProps {
   project: Project;
@@ -53,4 +52,3 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
 };
 
 export default ProjectContent;
-
