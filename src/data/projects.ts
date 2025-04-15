@@ -1,4 +1,4 @@
-import { Github, FileText, Database } from "lucide-react";
+import { Github, FileText } from "lucide-react";
 
 export interface Project {
   id: number | string;
@@ -7,7 +7,7 @@ export interface Project {
   problem?: string;
   approach?: string[];
   technologies: string[];
-  challenges: string;
+  challenges?: string;
   results?: string;
   images: string[];
   files: {
@@ -122,46 +122,7 @@ export const projects: { [key: string]: Project } = {
     id: 2,
     title: "Tableau HR Dashboard",
     description: "A comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
-    userStory: "As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
-    sections: {
-      overview: {
-        title: "Overview Features",
-        items: [
-          "Total number of hired employees, active employees, and terminated employees",
-          "Visualization of hired and terminated employees over years",
-          "Breakdown of total employees by department and job titles",
-          "Comparison of employees between HQ and branches (New York is HQ)",
-          "Distribution of employees by city and state"
-        ]
-      },
-      demographics: {
-        title: "Demographics Analysis",
-        items: [
-          "Gender ratio visualization",
-          "Distribution across age groups and education levels",
-          "Total employees by age group",
-          "Total employees by education level",
-          "Correlation between educational backgrounds and performance ratings"
-        ]
-      },
-      income: {
-        title: "Income Analysis",
-        items: [
-          "Compare salaries across different education levels by gender",
-          "Age-salary correlation by department"
-        ]
-      },
-      employeeRecords: {
-        title: "Employee Records View",
-        items: [
-          "Comprehensive employee list with detailed information",
-          "Filterable columns for customized views"
-        ]
-      }
-    },
     technologies: ["Tableau", "Data Visualization", "HR Analytics", "Dashboard Design"],
-    challenges: "The main challenge was designing an intuitive interface that could present complex HR data in an easily digestible format while maintaining the ability to drill down into specific details when needed.",
-    results: "The dashboard successfully provides HR managers with both high-level insights and detailed employee information, enabling data-driven decision-making for workforce management.",
     images: [
       "/lovable-uploads/481792a5-eac3-4231-8d11-f3e87ca49529.png",
       "/lovable-uploads/bacdff3b-7f39-43d9-9ddc-8278e37536c8.png"
@@ -177,67 +138,53 @@ export const projects: { [key: string]: Project } = {
         url: "https://github.com/Suhaib033/HR-Dashboard/tree/main/docs",
         icon: FileText
       }
-    ]
+    ],
+    userStory: "As an HR manager, I want a comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
+    sections: {
+      overview: {
+        title: "Overview",
+        items: [
+          "Display the total number of hired employees, active employees, and terminated employees",
+          "Visualize the total number of hired and terminated employees over the years",
+          "Present a breakdown of total employees by department and job titles",
+          "Compare total employees between headquarters (HQ) and branches (New York is the HQ)",
+          "Show the distribution of employees by city and state"
+        ]
+      },
+      demographics: {
+        title: "Demographics",
+        items: [
+          "Present the gender ratio in the company",
+          "Visualize the distribution of employees across age groups and education levels",
+          "Show the total number of employees within each age group",
+          "Show the total number of employees within each education level",
+          "Present the correlation between employees's educational backgrounds and their performance ratings"
+        ]
+      },
+      income: {
+        title: "Income Analysis",
+        items: [
+          "Compare salaries across different education levels for both genders to identify any discrepancies or patterns",
+          "Present how the age correlate with the salary for employees in each department"
+        ]
+      },
+      employeeRecords: {
+        title: "Employee Records View",
+        items: [
+          "Provide a comprehensive list of all employees with necessary information such as name, department, position, gender, age, education, and salary",
+          "Users should be able to filter the list based on any of the available columns"
+        ]
+      }
+    }
   },
   "3": {
     id: 3,
     title: "Netflix Analytics Dashboard",
     description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
-    userStory: "As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis.",
-    sections: {
-      overview: {
-        title: "Overview Features",
-        items: [
-          "Total number of movies and TV shows metrics",
-          "Content additions over time visualization",
-          "Genre and type breakdown analysis",
-          "Regional content distribution comparison",
-          "Country and language distribution metrics"
-        ]
-      },
-      demographics: {
-        title: "Content Demographics",
-        items: [
-          "Movie to TV show ratio analysis",
-          "Genre and ratings distribution",
-          "Content volume by genre",
-          "Rating category analysis",
-          "Viewer engagement correlation with ratings"
-        ]
-      },
-      performance: {
-        title: "Performance Analysis",
-        items: [
-          "Genre-specific viewer engagement patterns",
-          "Rating correlation with viewer engagement",
-          "Content performance by genre"
-        ]
-      },
-      records: {
-        title: "Content Records Features",
-        items: [
-          "Comprehensive content listing",
-          "Multi-column filtering capabilities",
-          "Detailed metadata display",
-          "Interactive data exploration"
-        ]
-      },
-      additional: {
-        title: "Additional Features",
-        items: [
-          "Interactive data filters",
-          "Dynamic visualization components",
-          "Drill-down analysis capabilities",
-          "Data and visual export options"
-        ]
-      }
-    },
     technologies: ["Power BI", "Data Analysis", "Dashboard Design", "Data Visualization"],
-    challenges: "The main challenge was designing an intuitive interface that could present complex Netflix content data in an easily digestible format while maintaining the ability to drill down into specific metrics when needed.",
-    results: "The dashboard successfully provides analysts with both high-level insights and detailed content information, enabling data-driven decision-making for content strategy.",
     images: [
-      "/lovable-uploads/83a7d5d6-67a9-4b45-bc49-e07573f2387f.png",
-      "/lovable-uploads/9cd31741-345a-4c31-bddb-b482161a03da.png"
+      "/lovable-uploads/0bb229d7-4dd8-4ddb-bec5-99322fe27e38.png",
+      "/lovable-uploads/bb449194-1f85-45c6-ac44-370fb145bc3f.png"
     ],
     files: [
       {
@@ -250,55 +197,52 @@ export const projects: { [key: string]: Project } = {
         url: "https://github.com/Suhaib033/Netflix-Analytics/tree/main/docs",
         icon: FileText
       }
-    ]
-  },
-  "default": {
-    id: "default",
-    title: "Sales Dashboard Analysis",
-    description: "Created an interactive dashboard to analyze sales trends and customer behavior for an e-commerce platform.",
-    problem: "The client needed a way to visualize sales data across multiple dimensions to identify trends and opportunities for growth.",
-    approach: [
-      "Conducted stakeholder interviews to understand key business questions",
-      "Cleaned and transformed raw sales data from multiple sources",
-      "Designed dashboard mockups for stakeholder approval",
-      "Built interactive visualizations with drill-down capabilities",
-      "Implemented automated data refresh processes"
     ],
-    technologies: [
-      "Python (Pandas, NumPy) for data processing",
-      "Tableau for visualization and dashboard creation",
-      "SQL for data extraction",
-      "Git for version control"
-    ],
-    challenges: "One of the main challenges was integrating data from multiple sources with inconsistent formatting. I resolved this by creating a data transformation pipeline that standardized formats and merged data sources.",
-    results: "The dashboard revealed that 60% of sales came from returning customers, and that product bundles outperformed individual products by 35%. This led to a strategic shift in marketing focus that increased overall revenue by 22% in the following quarter.",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-    files: [
-      {
-        name: "View Code on GitHub",
-        url: "https://github.com/",
-        icon: Github
+    userStory: "As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis.",
+    sections: {
+      overview: {
+        title: "Overview",
+        items: [
+          "Display the total number of movies and TV shows",
+          "Visualize the total number of movies and TV shows added over the years",
+          "Present a breakdown of total content by genre and type (movie or TV show)",
+          "Compare total content between different regions (e.g., North America, Europe, Asia)",
+          "Show the distribution of content by country and language"
+        ]
       },
-      {
-        name: "Download Full Analysis Report (PDF)",
-        url: "/path-to-sample-file.pdf",
-        icon: FileText
+      demographics: {
+        title: "Content Demographics",
+        items: [
+          "Present the ratio of movies to TV shows",
+          "Visualize the distribution of content across different genres and ratings",
+          "Show the total number of content within each genre",
+          "Show the total number of content within each rating category",
+          "Present the correlation between content ratings and their viewer engagement metrics"
+        ]
       },
-      {
-        name: "View Presentation Slides",
-        url: "/path-to-sample-slides.pdf",
-        icon: FileText
+      performance: {
+        title: "Performance Analysis",
+        items: [
+          "Compare viewer engagement across different genres for both movies and TV shows to identify any discrepancies or patterns",
+          "Present how the content ratings correlate with viewer engagement for content in each genre"
+        ]
       },
-      {
-        name: "Explore Data Dictionary (CSV)",
-        url: "/path-to-sample-data.csv",
-        icon: Database
+      contentRecords: {
+        title: "Content Records View",
+        items: [
+          "Provide a comprehensive list of all content with necessary information such as title, type (movie or TV show), genre, rating, release year, duration, and viewer engagement metrics",
+          "Users should be able to filter the list based on any of the available columns"
+        ]
       },
-      {
-        name: "See Dashboard Screenshots",
-        url: "/gallery",
-        icon: Image
+      additional: {
+        title: "Additional Features",
+        items: [
+          "Interactive Filters: Allow users to filter data by year, genre, type, region, and rating",
+          "Dynamic Visuals: Use dynamic and interactive visuals to present data, including bar charts, line charts, pie charts, and maps",
+          "Drill-Down Capabilities: Enable users to drill down into specific data points for more detailed analysis",
+          "Export Options: Allow users to export data and visuals for reporting purposes"
+        ]
       }
-    ]
+    }
   }
 };
