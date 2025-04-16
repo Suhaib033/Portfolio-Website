@@ -61,11 +61,15 @@ const About = () => {
           
           <div className="md:col-span-1">
             <div className="bg-gray-800 rounded-xl overflow-hidden">
-              <div className="aspect-[3/4] bg-gray-700 flex items-center justify-center text-gray-500">
-                Your Photo
+              <div className="aspect-[3/4] bg-gray-700">
+                <img 
+                  src="/lovable-uploads/ff076a1d-5c1b-40cd-90c8-ea644af124cb.png"
+                  alt="Ahmed Salahuddin Suhaib"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-4">
-                <h3 className="text-xl font-semibold text-white">Your Name</h3>
+                <h3 className="text-xl font-semibold text-white">Ahmed Salahuddin Suhaib</h3>
                 <p className="text-gray-400">Aspiring Data Analyst & Engineer</p>
               </div>
             </div>
