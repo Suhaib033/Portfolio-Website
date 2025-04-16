@@ -6,18 +6,18 @@ import OrangeHue from "../components/OrangeHue";
 // Sample project data
 const projects = [
   {
+    id: 2,
+    title: "Tableau HR Dashboard",
+    description: "A comprehensive dashboard to analyze human resources data, providing both summary views for high-level insights and detailed employee records for in-depth analysis",
+    technologies: ["Tableau", "Data Analysis", "HR Analytics", "Dashboard Design"],
+    image: "/lovable-uploads/0f44b46e-3500-44c3-8221-25e565bfb550.png"
+  },
+  {
     id: 1,
     title: "SQL Data Warehouse",
     description: "Designed a comprehensive data warehousing and analytics solution that consolidates sales data, enabling analytical reporting and informed decision-making.",
     technologies: ["SQL", "SQL Server", "Data Modeling", "ETL", "Analytics"],
     image: "/lovable-uploads/f70cbb10-7fd9-4ce3-b8db-0bd09654a412.png"
-  },
-  {
-    id: 2,
-    title: "ETL Pipeline for Customer Data",
-    description: "Designed and implemented a robust ETL pipeline to process and transform customer data from multiple sources.",
-    technologies: ["Python", "Apache Airflow", "PostgreSQL", "dbt"],
-    image: "/placeholder.svg"
   },
   {
     id: 3,
