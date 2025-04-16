@@ -149,6 +149,30 @@ const projects = {
       }
     ]
   },
+  "1": {
+    id: 1,
+    title: "SQL Data Warehouse",
+    description: "Designed a comprehensive data warehousing and analytics solution that consolidates sales data, enabling analytical reporting and informed decision-making.",
+    technologies: ["SQL", "SQL Server", "Data Modeling", "ETL", "Analytics"],
+    images: [
+      "/lovable-uploads/7e93b902-696a-4fd4-8824-9239a2e099a9.png",
+      "/lovable-uploads/3afdbe22-27e7-4bff-999b-bce26ddbdc17.png",
+      "/lovable-uploads/e8a52e8c-9010-4596-ab1c-4dd87e5c2257.png",
+      "/lovable-uploads/fcd77f52-3c15-472b-97b8-86a9f44a69fe.png"
+    ],
+    files: [
+      {
+        name: "View Code on GitHub",
+        url: "https://github.com/Suhaib033/SQL-Data-Warehouse",
+        icon: Github
+      },
+      {
+        name: "View Documentation",
+        url: "https://github.com/Suhaib033/SQL-Data-Warehouse/tree/main/docs",
+        icon: FileText
+      }
+    ]
+  },
   "default": {
     id: "default",
     title: "Sales Dashboard Analysis",

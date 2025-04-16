@@ -21,7 +21,7 @@ const Resume = () => {
             </p>
             
             <a 
-              href="YOUR_RESUME_PDF_URL_HERE" 
+              href="https://drive.google.com/file/d/1v7bDc-W6KfAFh0VhNLS4N6L2Oo2KYbrQ/view?usp=sharing" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-portfolio-brown text-white px-6 py-3 rounded-lg transition-all duration-200 hover:bg-portfolio-orange transform hover:scale-95"
