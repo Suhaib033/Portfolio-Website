@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -74,7 +73,83 @@ const projects = {
       }
     ]
   },
-  // Keep the existing sample project as a fallback for other IDs
+  "3": {
+    id: 3,
+    title: "Netflix Analytics Dashboard",
+    description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
+    technologies: ["Power BI", "Data Analysis", "Dashboard Design"],
+    overview: `
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">User Story</h3>
+      <p class="text-gray-300 mb-6">As a data analyst, I want a comprehensive dashboard to analyze Netflix data, providing both summary views for high-level insights and detailed content records for in-depth analysis.</p>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Summary View</h3>
+      <p class="text-gray-300 mb-4">The summary view should be divided into three main sections: Overview, Content Demographics, and Performance Analysis.</p>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Overview</h3>
+      <p class="text-gray-300 mb-2">The Overview section should provide a snapshot of the overall Netflix metrics, including:</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Display the total number of movies and TV shows.</li>
+        <li>Visualize the total number of movies and TV shows added over the years.</li>
+        <li>Present a breakdown of total content by genre and type (movie or TV show).</li>
+        <li>Compare total content between different regions (e.g., North America, Europe, Asia).</li>
+        <li>Show the distribution of content by country and language.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Content Demographics</h3>
+      <p class="text-gray-300 mb-2">The Content Demographics section should offer insights into the composition of the Netflix library, including:</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Present the ratio of movies to TV shows.</li>
+        <li>Visualize the distribution of content across different genres and ratings.</li>
+        <li>Show the total number of content within each genre.</li>
+        <li>Show the total number of content within each rating category.</li>
+        <li>Present the correlation between content ratings and their viewer engagement metrics.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Performance Analysis</h3>
+      <p class="text-gray-300 mb-2">The Performance Analysis section should focus on viewer-related metrics, including:</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Compare viewer engagement across different genres for both movies and TV shows to identify any discrepancies or patterns.</li>
+        <li>Present how the content ratings correlate with viewer engagement for content in each genre.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Content Records View</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Provide a comprehensive list of all content with necessary information such as title, type (movie or TV show), genre, rating, release year, duration, and viewer engagement metrics.</li>
+        <li>Users should be able to filter the list based on any of the available columns.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Additional Features</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Interactive Filters: Allow users to filter data by year, genre, type, region, and rating.</li>
+        <li>Dynamic Visuals: Use dynamic and interactive visuals to present data, including bar charts, line charts, pie charts, and maps.</li>
+        <li>Drill-Down Capabilities: Enable users to drill down into specific data points for more detailed analysis.</li>
+        <li>Export Options: Allow users to export data and visuals for reporting purposes.</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Considerations</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Data Source: Ensure the data is clean and well-organized, including all necessary fields such as title, type, genre, rating, release year, duration, and viewer engagement metrics.</li>
+        <li>Data Modeling: Create a robust data model that supports efficient querying and analysis.</li>
+        <li>User Experience: Design the dashboard with a user-friendly interface that is intuitive and easy to navigate.</li>
+      </ul>
+    `,
+    images: [
+      "/lovable-uploads/0a41b7bd-6642-44cc-945e-da3f0ac2f746.png",
+      "/lovable-uploads/ba44f2ef-27a1-415b-88c7-48face69a92c.png"
+    ],
+    files: [
+      {
+        name: "View Code on GitHub",
+        url: "https://github.com/Suhaib033/Netflix-Analytics",
+        icon: Github
+      },
+      {
+        name: "View Documentation",
+        url: "https://github.com/Suhaib033/Netflix-Analytics/tree/main/docs",
+        icon: FileText
+      }
+    ]
+  },
   "default": {
     id: "default",
     title: "Sales Dashboard Analysis",
