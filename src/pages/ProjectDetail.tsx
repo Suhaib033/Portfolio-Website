@@ -1,5 +1,6 @@
+
 import { useParams, Link } from "react-router-dom";
-import { ExternalLink, Github, FileText } from "lucide-react";
+import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
 
 // Project data
