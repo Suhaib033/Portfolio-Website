@@ -315,10 +315,12 @@ const Index = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-portfolio-orange/30 to-portfolio-darkBrown/50 border-4 border-portfolio-orange overflow-hidden">
-              <div className="w-full h-full bg-gray-800/50 backdrop-blur-sm flex items-center justify-center text-gray-300">
-                Your Photo
-              </div>
+            <div className="w-64 h-64 rounded-full overflow-hidden">
+              <img 
+                src="/lovable-uploads/ff076a1d-5c1b-40cd-90c8-ea644af124cb.png"
+                alt="Suhaib Ahmed"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>

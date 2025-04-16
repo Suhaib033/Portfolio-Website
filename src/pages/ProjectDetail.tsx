@@ -134,7 +134,6 @@ const projects = {
       </ul>
     `,
     images: [
-      "/lovable-uploads/0a41b7bd-6642-44cc-945e-da3f0ac2f746.png",
       "/lovable-uploads/ba44f2ef-27a1-415b-88c7-48face69a92c.png"
     ],
     files: [
