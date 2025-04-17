@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -171,7 +172,32 @@ const projects = {
         url: "https://github.com/Suhaib033/SQL-Data-Warehouse/tree/main/docs",
         icon: FileText
       }
-    ]
+    ],
+    // Add missing fields to ensure consistent structure with other projects
+    problem: "Organizations struggle with siloed data across multiple systems, making it difficult to generate comprehensive reports and gain insights for decision-making.",
+    approach: [
+      "Analyzed existing data sources and business requirements",
+      "Designed a dimensional data model for analytical reporting",
+      "Implemented ETL processes to extract, transform, and load data",
+      "Created views and stored procedures for common reporting needs",
+      "Deployed and tested the solution with stakeholders"
+    ],
+    overview: `
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Data Warehouse Overview</h3>
+      <p class="text-gray-300 mb-6">This project implements a comprehensive data warehousing solution that consolidates sales and inventory data from multiple source systems into a unified analytical platform.</p>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Key Features</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li>Star schema design with fact and dimension tables for optimal query performance</li>
+        <li>Automated ETL processes for daily data refresh</li>
+        <li>Historical data tracking with slowly changing dimensions</li>
+        <li>Optimized for both detailed and aggregated reporting needs</li>
+        <li>Integrated data quality checks and error handling</li>
+      </ul>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Technical Implementation</h3>
+      <p class="text-gray-300 mb-6">The solution was implemented using SQL Server and related technologies, with careful attention to performance optimization and data integrity.</p>
+    `
   },
   "default": {
     id: "default",
@@ -252,7 +278,7 @@ const ProjectDetail = () => {
           {/* Project images carousel/gallery */}
           <div className="mb-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {project.images.map((image, index) => (
+              {project.images && project.images.map((image, index) => (
                 <div 
                   key={index} 
                   className="aspect-video bg-gray-700 rounded-lg overflow-hidden"
@@ -284,7 +310,7 @@ const ProjectDetail = () => {
                 <section>
                   <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">My Process / Approach</h2>
                   <ol className="list-decimal list-inside text-gray-300 space-y-2 pl-4">
-                    {project.approach.map((step, index) => (
+                    {project.approach && project.approach.map((step, index) => (
                       <li key={index}>{step}</li>
                     ))}
                   </ol>
@@ -293,21 +319,25 @@ const ProjectDetail = () => {
                 <section>
                   <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">Tools & Technologies Used</h2>
                   <ul className="list-disc list-inside text-gray-300 space-y-2 pl-4">
-                    {project.technologies.map((tech, index) => (
+                    {project.technologies && project.technologies.map((tech, index) => (
                       <li key={index}>{tech}</li>
                     ))}
                   </ul>
                 </section>
                 
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">Challenges & Solutions</h2>
-                  <p className="text-gray-300">{project.challenges}</p>
-                </section>
+                {project.challenges && (
+                  <section>
+                    <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">Challenges & Solutions</h2>
+                    <p className="text-gray-300">{project.challenges}</p>
+                  </section>
+                )}
                 
-                <section>
-                  <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">Results & Key Findings</h2>
-                  <p className="text-gray-300">{project.results}</p>
-                </section>
+                {project.results && (
+                  <section>
+                    <h2 className="text-2xl font-semibold mb-4 text-portfolio-orange">Results & Key Findings</h2>
+                    <p className="text-gray-300">{project.results}</p>
+                  </section>
+                )}
               </>
             )}
             
@@ -316,7 +346,7 @@ const ProjectDetail = () => {
               <h2 className="text-2xl font-semibold mb-6 text-portfolio-orange">Project Files</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {project.files.map((file, index) => (
+                {project.files && project.files.map((file, index) => (
                   <a 
                     key={index} 
                     href={file.url} 
