@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -203,7 +204,12 @@ const projects = {
     description: "Explores the power of Dataiku and Machine Learning to transform Netflix content analysis by processing over 7,000 movies and TV series to develop predictive models for viewing trends.",
     technologies: ["Dataiku", "Machine Learning", "Random Forest", "Ridge Regression", "Data Analysis"],
     images: [
-      "/lovable-uploads/db513a16-ef19-4a24-a5c3-451a7e52b7ca.png"
+      "/lovable-uploads/db513a16-ef19-4a24-a5c3-451a7e52b7ca.png",
+      "/lovable-uploads/26ce519d-594b-49b0-9744-02c2a74886b8.png",
+      "/lovable-uploads/371cf14b-bb6a-429c-b9a6-7cebe0acc582.png",
+      "/lovable-uploads/81596bf6-5723-432b-976f-481e49ae232e.png",
+      "/lovable-uploads/99118335-d9e5-46c4-a236-916eded8a4b0.png",
+      "/lovable-uploads/5d104f56-884a-46b0-a00a-cd9b72f9a700.png"
     ],
     overview: `
       <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Description</h3>
