@@ -25,6 +25,13 @@ const projects = [
     description: "End-to-end project for building a Netflix analytics dashboard in Power BI for analyzing ratings and the number of votes, segmented by countries, genres, and titles.",
     technologies: ["Power BI", "Data Analysis", "Dashboard Design"],
     image: "/lovable-uploads/0a41b7bd-6642-44cc-945e-da3f0ac2f746.png"
+  },
+  {
+    id: 4,
+    title: "Netflix Content Analytics using Dataiku and ML",
+    description: "Explores the power of Dataiku and Machine Learning to transform Netflix content analysis by processing over 7,000 movies and TV series to develop predictive models for viewing trends.",
+    technologies: ["Dataiku", "Machine Learning", "Random Forest", "Ridge Regression", "Data Analysis"],
+    image: "/lovable-uploads/db513a16-ef19-4a24-a5c3-451a7e52b7ca.png"
   }
 ];
 

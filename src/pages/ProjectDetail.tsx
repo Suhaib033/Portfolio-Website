@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ExternalLink, Github, FileText, Database, Image } from "lucide-react";
 import OrangeHue from "../components/OrangeHue";
@@ -173,7 +172,6 @@ const projects = {
         icon: FileText
       }
     ],
-    // Add missing fields to ensure consistent structure with other projects
     problem: "Organizations struggle with siloed data across multiple systems, making it difficult to generate comprehensive reports and gain insights for decision-making.",
     approach: [
       "Analyzed existing data sources and business requirements",
@@ -198,6 +196,86 @@ const projects = {
       <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Technical Implementation</h3>
       <p class="text-gray-300 mb-6">The solution was implemented using SQL Server and related technologies, with careful attention to performance optimization and data integrity.</p>
     `
+  },
+  "4": {
+    id: 4,
+    title: "Netflix Content Analytics using Dataiku and ML",
+    description: "Explores the power of Dataiku and Machine Learning to transform Netflix content analysis by processing over 7,000 movies and TV series to develop predictive models for viewing trends.",
+    technologies: ["Dataiku", "Machine Learning", "Random Forest", "Ridge Regression", "Data Analysis"],
+    images: [
+      "/lovable-uploads/db513a16-ef19-4a24-a5c3-451a7e52b7ca.png"
+    ],
+    overview: `
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Description</h3>
+      <p class="text-gray-300 mb-6">This project explores the power of Dataiku and Machine Learning to transform Netflix content analysis. By processing a rich dataset of over 7,000 movies and TV series, I developed predictive models that can anticipate viewing trends and content popularity. This work showcases how AI-driven insights can optimize content acquisition, personalize recommendations, and ultimately drive business growth in the competitive streaming landscape.</p>
+
+      <h3 class="text-xl font-semibold mb-3 text-portfolio-orange">Project Brief: Predictive Content Analysis for Netflix - Initial Model Assessment</h3>
+      <p class="text-gray-300 mb-4">Objective: To identify key drivers of content performance on the Netflix platform by developing and evaluating machine learning models within the Dataiku environment. This initial phase focuses on comparing two foundational regression models using a dataset of over 7,000 titles and 16 features.</p>
+
+      <h4 class="text-lg font-semibold mb-2 text-portfolio-orange">Phase 1: Baseline Model Performance (Session 1)</h4>
+      <p class="text-gray-300 mb-4">The initial rapid prototyping session aimed to establish baseline performance and identify promising model architectures. We evaluated two distinct models: Random Forest and Ridge (L2) Regression, focusing on their ability to predict a target metric (presumably content success/rating) as measured by the R2 Score.</p>
+      
+      <p class="text-gray-300 mb-2"><strong>Observation 1.1:</strong> The Random Forest model demonstrated superior learning capability during this initial training run, achieving a higher R2 Score trajectory compared to Ridge Regression.</p>
+      <p class="text-gray-300 mb-6"><strong>Observation 1.2:</strong> Both models showed rapid convergence, indicating efficient learning within the sub-30-second training window allocated for this session.</p>
+
+      <h4 class="text-lg font-semibold mb-2 text-portfolio-orange">Phase 2: Detailed Model Evaluation & Feature Importance</h4>
+      <p class="text-gray-300 mb-4">Following the initial session, a more comprehensive training and evaluation were conducted for each model.</p>
+
+      <h5 class="text-md font-semibold mb-2 text-portfolio-orange">A. Random Forest Model Analysis:</h5>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-4">
+        <li><strong>Performance Metric:</strong> The Random Forest model achieved a final R2 Score of 0.477, indicating its capacity to explain approximately 47.7% of the variance in the target variable. This establishes it as the leading performer in this initial comparison.</li>
+        <li><strong>Model Configuration:</strong> The optimized model utilized 100 trees with a maximum depth of 14.</li>
+        <li><strong>Key Feature Insights:</strong>
+          <ul class="list-disc list-inside text-gray-300 space-y-1 pl-4 mt-2">
+            <li><em>listing_type:</em> Emerged as the most influential feature, suggesting that the fundamental format of the content (e.g., movie, TV series, original) is a primary determinant of the predicted outcome.</li>
+            <li><em>numVotes:</em> Ranked as the second most important feature, highlighting the strong correlation between existing user engagement/popularity and the target metric.</li>
+            <li><em>genre:</em> Also demonstrated significant predictive power.</li>
+          </ul>
+        </li>
+        <li><strong>Training Efficiency:</strong> The model was trained on a dataset of 4,082 rows and tested on 968 rows, with a total training time of approximately 26 seconds.</li>
+      </ul>
+
+      <h5 class="text-md font-semibold mb-2 text-portfolio-orange">B. Ridge (L2) Regression Model Analysis:</h5>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-4">
+        <li><strong>Performance Metric:</strong> The Ridge Regression model yielded an R2 Score of 0.414, explaining 41.4% of the target variable's variance.</li>
+        <li><strong>Model Configuration:</strong> Key hyperparameters included an Alpha of 3.0.</li>
+        <li><strong>Key Feature Insights:</strong>
+          <ul class="list-disc list-inside text-gray-300 space-y-1 pl-4 mt-2">
+            <li><em>genre:</em> Identified as the most dominant predictor for this model, emphasizing the strong influence of content categorization.</li>
+            <li><em>type:</em> (Presumably related to listing_type) also showed high importance.</li>
+            <li><em>listing_type:</em> Remained a significant feature, though with a different ranking compared to the Random Forest model.</li>
+          </ul>
+        </li>
+        <li><strong>Training Efficiency:</strong> Similar to Random Forest, training was conducted on 4,082 rows, tested on 968, with a training time of approximately 24 seconds.</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mb-2 text-portfolio-orange">Progressive Insights & Next Steps:</h4>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-4">
+        <li><strong>Model Efficacy:</strong> The Random Forest model currently exhibits superior predictive accuracy (R2 Score of 0.477) compared to Ridge Regression (0.414) for this specific prediction task.</li>
+        <li><strong>Dominant Predictors Identified:</strong> Across both models, listing_type, genre, and numVotes consistently appear as highly influential features. This strongly suggests that the content's format, category, and existing popularity are critical drivers of its performance.</li>
+        <li><strong>Divergent Feature Prioritization:</strong> The differing top-ranked features between the two models (listing_type for Random Forest vs. genre for Ridge Regression) warrant further investigation. This could indicate that different model architectures capture distinct aspects of feature influence or that feature interactions are being modeled differently.</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mb-2 text-portfolio-orange">Path Forward:</h4>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 pl-4 mb-6">
+        <li><strong>Deep Dive into Random Forest:</strong> Further hyperparameter tuning and exploration of feature interactions within the Random Forest model are recommended to potentially enhance its performance.</li>
+        <li><strong>Feature Engineering:</strong> Based on the identified key predictors, consider creating interaction terms (e.g., listing_type * genre) or more granular categorical features to capture nuanced relationships.</li>
+        <li><strong>Model Exploration:</strong> While Random Forest leads, exploring other ensemble methods or gradient boosting models could yield further improvements.</li>
+        <li><strong>Business Contextualization:</strong> Correlate these model-driven insights with domain knowledge from content strategy teams to validate findings and generate actionable recommendations.</li>
+      </ul>
+    `,
+    files: [
+      {
+        name: "View Code on GitHub",
+        url: "https://github.com/Suhaib033/Netflix-ML-Analytics",
+        icon: Github
+      },
+      {
+        name: "View Documentation",
+        url: "https://github.com/Suhaib033/Netflix-ML-Analytics/tree/main/docs",
+        icon: FileText
+      }
+    ]
   },
   "default": {
     id: "default",
@@ -250,6 +328,7 @@ const projects = {
   }
 };
 
+// ProjectDetail component structure and JSX
 const ProjectDetail = () => {
   const { id } = useParams();
   
@@ -293,7 +372,7 @@ const ProjectDetail = () => {
             </div>
           </div>
           
-          {/* Special custom overview section for SQL Data Warehouse */}
+          {/* Special custom overview section for projects with overview */}
           {project.overview && (
             <div className="mb-10" dangerouslySetInnerHTML={{ __html: project.overview }}></div>
           )}
